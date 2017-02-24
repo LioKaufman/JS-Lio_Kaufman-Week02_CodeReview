@@ -6,35 +6,67 @@ body * {
 	position: relative;
 }
 
+h1, h2, p {
+	text-align: center;
+}
+
 .flex {
 	display: flex;
-	/*justify-content: center;*/
 }
 
 .players {
-	/*display: flex;*/
-	/*flex-direction: column;*/
-	/*justify-content: center;*/
+	display: flex;
 	width: 50%;
+	flex-direction: column;
+	justify-content: center;
+	align-self: center;		
 }
 
-.results {
-	/*justify-content: center;*/
-	align-items: center;
-	width: 50%;
-}
 
 .diceRollButton {
-	/*justify-content: center;*/
-	text-align: center;
 	background-color: #eeddcc;
-	width: 200px;
+	align-self: center;	
 }
 
 .diceRollButton:Hover {
 	background-color: #ccddee;
+}	
+
+@media (min-width: 1000px) {
+	
+	main {
+		flex-direction: row;
+	}
+
+	.diceRollButton {
+		width: 200px;
+	}
+	
 }
 
-#names {
-	text-align: center;
+
+@media (max-width: 999px) {
+		
+	main {
+		flex-direction: column;
+	}
+
+	.diceRollButton {
+		width: 100px;
+	}
+
 }
+
+
+/*	
+	.results {
+		justify-content: center;
+		align-items: center;
+		width: 50%;
+	}
+
+	
+
+
+	
+*/

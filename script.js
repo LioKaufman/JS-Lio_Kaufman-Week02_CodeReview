@@ -7,6 +7,8 @@ function getNames(){
 	var player2 = prompt("Welcome to Dice-Roulette.  Please enter the name of the second player.", "Player 2 Name:");
 
 	names.innerText = player1 + " vs. " + player2;
+	name1.innerText = player1;
+	name2.innerText = player2;
 };
 
 
@@ -17,14 +19,15 @@ function dieRoll() {
 	return (Math.ceil(Math.random()*6));
 };
 
+
 function playGame(playerID) {
 
 /* 
-	This function uses an autonomous funciton to create an array of 
-	3 random die rolls and places them at the outcome of each player, 
+	This function uses an funciton to create an array of 3 random 
+	die rolls and places them at the outcome of each player, 
 	based on their player ID 
 */
-
+ 
 	var outcome = [dieRoll(), dieRoll(), dieRoll()];
 	playerID.innerText = outcome[0] + " & " + outcome[1] + " & " + outcome[2];	
 };
