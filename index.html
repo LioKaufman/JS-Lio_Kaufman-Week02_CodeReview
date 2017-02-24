@@ -6,27 +6,28 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script type="text/javascript" src="script.js" ></script>
 </head>
+
 <body onload="getNames()">
 	<!-- wireframe strucutre in zen code -->
 	<!-- 
 	header>h1#names^main.flex>div.players#payer1+div.players#payer2^footer 
 	-->
 	<header>
-		<h1 id="names"> Igor v Goran</h1>
+		<h1 id="names"></h1>
 	</header>
 	<main class="flex">
 		<div class="players" id="payer1">
 			<!-- zen: fig.results+button.diceRoll -->
 			<figure class="results">
-				
+				<p id="playerID1"></p>
 			</figure>
-			<button class="diceRoll"></button>
+			<button class="diceRollButton" onclick="playGame(playerID1)">Click Here to Roll Your Dice</button>
 		</div>
 		<div class="players" id="payer2">
 			<figure class="results">
-				
+				<p id="playerID2"></p>
 			</figure>
-			<button class="diceRoll"></button>
+			<button class="diceRollButton" onclick="playGame(playerID2)">Click Here to Roll Your Dice</button>
 		</div>
 	</main>
 	<footer>

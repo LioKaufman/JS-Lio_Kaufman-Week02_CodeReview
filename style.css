@@ -24,12 +24,17 @@ body * {
 	width: 50%;
 }
 
-.diceRoll {
+.diceRollButton {
 	/*justify-content: center;*/
-	align-items: flex-end;
+	text-align: center;
 	background-color: #eeddcc;
 	width: 200px;
 }
+
+.diceRollButton:Hover {
+	background-color: #ccddee;
+}
+
 #names {
 	text-align: center;
 }
