@@ -8,9 +8,28 @@ body * {
 
 .flex {
 	display: flex;
+	/*justify-content: center;*/
 }
 
 .players {
-	justify-content: center;
+	/*display: flex;*/
+	/*flex-direction: column;*/
+	/*justify-content: center;*/
 	width: 50%;
+}
+
+.results {
+	/*justify-content: center;*/
+	align-items: center;
+	width: 50%;
+}
+
+.diceRoll {
+	/*justify-content: center;*/
+	align-items: flex-end;
+	background-color: #eeddcc;
+	width: 200px;
+}
+#names {
+	text-align: center;
 }
