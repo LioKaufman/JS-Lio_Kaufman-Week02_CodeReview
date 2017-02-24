@@ -1,6 +1,6 @@
 body * {
 	border: 1px solid;
-	background-color: #eeeeee;
+	/*background-color: #eeeeee;*/
 	margin: 5px 5px 5px;
 	padding: 5px 5px 5px;
 	position: relative;
@@ -10,16 +10,27 @@ h1, h2, p {
 	text-align: center;
 }
 
+figure {
+	align-items: center;
+}
+
+p {
+	top: 40%;
+	left: 18%;
+	width: 50%;
+}
+
 .flex {
 	display: flex;
+	justify-content: center;
 }
 
 .players {
 	display: flex;
-	width: 50%;
+	width: 30%;
 	flex-direction: column;
 	justify-content: center;
-	align-self: center;		
+	align-self: center;	
 }
 
 
@@ -32,16 +43,29 @@ h1, h2, p {
 	background-color: #ccddee;
 }	
 
+
+
 @media (min-width: 1000px) {
 	
 	main {
 		flex-direction: row;
 	}
 
+	h1, h2, p {
+		font-size: 2em;
+	}
+
 	.diceRollButton {
 		width: 200px;
 	}
 	
+	.results {
+		background-image: url(img/frame.png);
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+		height: 300px;
+	}
+
 }
 
 
@@ -50,9 +74,20 @@ h1, h2, p {
 	main {
 		flex-direction: column;
 	}
+	
+	h1, h2, p {
+		font-size: 1em;
+	}
 
 	.diceRollButton {
 		width: 100px;
+	}
+	
+	.results {
+		background-image: url(img/frame.png);
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+		height: 200px;
 	}
 
 }

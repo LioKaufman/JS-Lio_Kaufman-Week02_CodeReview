@@ -1,5 +1,5 @@
 
-function getNames(){
+function getNames() {
 
 // this function prompts for player names and inserts them in the header
 
@@ -9,6 +9,8 @@ function getNames(){
 	names.innerText = player1 + " vs. " + player2;
 	name1.innerText = player1;
 	name2.innerText = player2;
+
+	bgColour()
 };
 
 
@@ -30,4 +32,23 @@ function playGame(playerID) {
  
 	var outcome = [dieRoll(), dieRoll(), dieRoll()];
 	playerID.innerText = outcome[0] + " & " + outcome[1] + " & " + outcome[2];	
+};
+
+
+function bgColour() {
+
+	// This function generates random background colours.
+
+	var red = Math.floor(Math.random()*255);
+	var green = Math.floor(Math.random()*255);
+	var blue = Math.floor(Math.random()*255);
+
+	document.getElementById("payer1").style.backgroundColor = "rgb("+red+", "+green+", "+blue+")";
+
+	var red = Math.floor(Math.random()*255);
+	var green = Math.floor(Math.random()*255);
+	var blue = Math.floor(Math.random()*255);
+
+	document.getElementById("payer2").style.backgroundColor = "rgb("+red+", "+green+", "+blue+")";
+
 };
