@@ -1,0 +1,16 @@
+body * {
+	border: 1px solid;
+	background-color: #eeeeee;
+	margin: 5px 5px 5px;
+	padding: 5px 5px 5px;
+	position: relative;
+}
+
+.flex {
+	display: flex;
+}
+
+.players {
+	justify-content: center;
+	width: 50%;
+}
