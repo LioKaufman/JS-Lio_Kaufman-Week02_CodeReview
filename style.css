@@ -1,5 +1,5 @@
 body * {
-	border: 1px solid;
+	/*border: 1px solid;*/
 	/*background-color: #eeeeee;*/
 	margin: 5px 5px 5px;
 	padding: 5px 5px 5px;
@@ -11,13 +11,19 @@ h1, h2, p {
 }
 
 figure {
+	display: inline-flex;
 	align-items: center;
+	justify-content: center;
+	left: 2%;
 }
 
 p {
-	top: 40%;
-	left: 18%;
-	width: 50%;
+	border: 3px solid;
+	right: 5%;
+	width: 10%;
+	height: 1em;
+	background-color: white;
+	box-shadow: 5px 5px 3px 1px #666666;
 }
 
 .flex {
@@ -27,7 +33,7 @@ p {
 
 .players {
 	display: flex;
-	width: 30%;
+	width: 35%;
 	flex-direction: column;
 	justify-content: center;
 	align-self: center;	
@@ -37,18 +43,55 @@ p {
 .diceRollButton {
 	background-color: #eeddcc;
 	align-self: center;	
+	box-shadow: 0px 0px 3px 5px #ccbbaa;
+	border-radius: 50px 50px 50px;
 }
 
 .diceRollButton:Hover {
 	background-color: #ccddee;
 }	
 
-
-
-@media (min-width: 1000px) {
+/*Break point for large screens*/
+@media (min-width: 1300px) {
 	
 	main {
 		flex-direction: row;
+	}
+	
+	header {
+		background-color: #777777;
+	}
+
+	h1, h2, p {
+		font-size: 3em;
+	}
+
+	button {
+		font-size: 1.5em;
+	}
+
+	.diceRollButton {
+		width: 350px;
+	}
+	
+	.results {
+		background-image: url(img/frame.png);
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+		height: 400px;
+	}
+
+}
+
+/*Break point for normal screens*/
+@media (min-width: 900px) and (max-width: 1299px){
+	
+	main {
+		flex-direction: row;
+	}
+	
+	header {
+		background-color: #aaaaaa;
 	}
 
 	h1, h2, p {
@@ -68,13 +111,17 @@ p {
 
 }
 
-
-@media (max-width: 999px) {
+/*Break point for small screens*/
+@media (max-width: 899px) {
 		
 	main {
 		flex-direction: column;
 	}
 	
+	header {
+		background-color: #eeeeee;
+	}
+
 	h1, h2, p {
 		font-size: 1em;
 	}
@@ -91,17 +138,3 @@ p {
 	}
 
 }
-
-
-/*	
-	.results {
-		justify-content: center;
-		align-items: center;
-		width: 50%;
-	}
-
-	
-
-
-	
-*/
