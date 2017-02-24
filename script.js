@@ -10,8 +10,10 @@ function getNames() {
 	name1.innerText = player1;
 	name2.innerText = player2;
 
+	// calls the change background colour function
 	bgColour()
 
+	// use of anonymus function to provide instructions
 	var Instructions = function() {
   					alert("Click on the each players respective buttons to roll the dice for that player");
 				};
@@ -23,8 +25,11 @@ function getNames() {
 function dieRoll() {
 
 // This function generates a dandome number from 1 to 6 and outputs it
+	
+	// Converts the random die number into a string. 
+	var Roll = String(Math.ceil(Math.random()*6));
 
-	return (Math.ceil(Math.random()*6));
+	return Roll
 };
 
 
@@ -52,12 +57,12 @@ function bgColour() {
 	var green = Math.floor(Math.random()*255);
 	var blue = Math.floor(Math.random()*255);
 
-	document.getElementById("payer1").style.backgroundColor = "rgb("+red+", "+green+", "+blue+")";
+	document.getElementById("player1").style.backgroundColor = "rgb("+red+", "+green+", "+blue+")";
 
 	var red = Math.floor(Math.random()*255);
 	var green = Math.floor(Math.random()*255);
 	var blue = Math.floor(Math.random()*255);
 
-	document.getElementById("payer2").style.backgroundColor = "rgb("+red+", "+green+", "+blue+")";
+	document.getElementById("player2").style.backgroundColor = "rgb("+red+", "+green+", "+blue+")";
 
 };
