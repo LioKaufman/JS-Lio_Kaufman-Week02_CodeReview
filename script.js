@@ -11,6 +11,12 @@ function getNames() {
 	name2.innerText = player2;
 
 	bgColour()
+
+	var Instructions = function() {
+  					alert("Click on the each players respective buttons to roll the dice for that player");
+				};
+	
+	Instructions();
 };
 
 
